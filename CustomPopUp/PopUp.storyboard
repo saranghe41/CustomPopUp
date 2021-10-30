@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zld-Sf-U8D" userLabel="contentView">
-                                <rect key="frame" x="62" y="298" width="290" height="300"/>
+                                <rect key="frame" x="62" y="248" width="290" height="400"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myImg" translatesAutoresizingMaskIntoConstraints="NO" id="NT0-NZ-r4h">
                                         <rect key="frame" x="100" y="20" width="90" height="120"/>
@@ -36,42 +36,71 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요! 지니입니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDR-wv-bby">
-                                        <rect key="frame" x="64.5" y="150" width="161" height="21"/>
+                                        <rect key="frame" x="64.5" y="150" width="161" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="꾸준히 공부하고 있어요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ll7-uK-xbC">
-                                        <rect key="frame" x="64.5" y="179" width="161" height="21"/>
+                                        <rect key="frame" x="64.5" y="178.5" width="161" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwW-xg-Fav">
-                                        <rect key="frame" x="85" y="240" width="120" height="30"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="H2d-Qs-Vkc"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="github 보러가기"/>
-                                        <connections>
-                                            <action selector="onSubScribBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dQr-mQ-CIu"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jq4-H1-E2h">
+                                        <rect key="frame" x="85" y="260" width="120" height="110"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCh-e4-wPu">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="TWM-hQ-sNh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="정대리 유툽 가기"/>
+                                                <connections>
+                                                    <action selector="onOpenChatBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sUd-WE-4lY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ja-CX-5Ra">
+                                                <rect key="frame" x="0.0" y="40" width="120" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="ZV9-mU-fqm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwW-xg-Fav">
+                                                <rect key="frame" x="0.0" y="80" width="120" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="H2d-Qs-Vkc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="github 보러가기"/>
+                                                <connections>
+                                                    <action selector="onSubScribBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dQr-mQ-CIu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Ll7-uK-xbC" firstAttribute="top" secondItem="QDR-wv-bby" secondAttribute="bottom" constant="8" id="4of-4q-InS"/>
                                     <constraint firstItem="NT0-NZ-r4h" firstAttribute="centerX" secondItem="Zld-Sf-U8D" secondAttribute="centerX" id="5LO-58-vSy"/>
-                                    <constraint firstItem="hwW-xg-Fav" firstAttribute="centerX" secondItem="Zld-Sf-U8D" secondAttribute="centerX" id="7tb-ch-wCp"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jq4-H1-E2h" secondAttribute="bottom" constant="30" id="7UT-vo-aYk"/>
                                     <constraint firstItem="QDR-wv-bby" firstAttribute="top" secondItem="NT0-NZ-r4h" secondAttribute="bottom" constant="10" id="8eb-LK-ntf"/>
                                     <constraint firstItem="QDR-wv-bby" firstAttribute="centerX" secondItem="Zld-Sf-U8D" secondAttribute="centerX" id="Ist-YT-oiP"/>
                                     <constraint firstAttribute="width" constant="290" id="PkS-20-O6C"/>
-                                    <constraint firstAttribute="height" constant="300" id="Qhp-XY-sOa"/>
-                                    <constraint firstAttribute="bottom" secondItem="hwW-xg-Fav" secondAttribute="bottom" constant="30" id="ecP-76-9LR"/>
+                                    <constraint firstAttribute="height" constant="400" id="Qhp-XY-sOa"/>
+                                    <constraint firstItem="Jq4-H1-E2h" firstAttribute="centerX" secondItem="Zld-Sf-U8D" secondAttribute="centerX" id="gI0-nH-CO4"/>
                                     <constraint firstItem="NT0-NZ-r4h" firstAttribute="top" secondItem="Zld-Sf-U8D" secondAttribute="top" constant="20" id="sRA-Ze-kg5"/>
                                     <constraint firstItem="Ll7-uK-xbC" firstAttribute="centerX" secondItem="Zld-Sf-U8D" secondAttribute="centerX" id="xFk-gP-9K5"/>
                                 </constraints>
@@ -92,6 +121,7 @@
                         <outlet property="bgBtn" destination="LFr-G4-1Gi" id="6ZE-0b-NGt"/>
                         <outlet property="contentView" destination="Zld-Sf-U8D" id="9iM-Pi-dfl"/>
                         <outlet property="myImg" destination="NT0-NZ-r4h" id="2py-jn-uOk"/>
+                        <outlet property="openChatBtn" destination="jCh-e4-wPu" id="Exf-3f-3qz"/>
                         <outlet property="subscribBtn" destination="hwW-xg-Fav" id="nTu-PJ-b5p"/>
                     </connections>
                 </viewController>
@@ -105,8 +135,14 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

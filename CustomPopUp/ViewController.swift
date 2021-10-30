@@ -8,8 +8,8 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, PopUpDelegate {
+    
     @IBOutlet weak var popupBtn: UIButton!
     @IBOutlet weak var myWebView: WKWebView!
     
@@ -43,8 +43,18 @@ class ViewController: UIViewController {
             self.myWebView.load(URLRequest(url: myChannelUrl!))
         }
         
+        customPopUpVC.popupDelegate = self
+        
         // present : 현재 viewcontroller에서 다른 viewcontroller를 보여주는 기능
         self.present(customPopUpVC, animated: true, completion: nil) // comletion: 보여주고나서 처리할것인가에 대한 설정
+    }
+    
+    // MARK: - PopUpDelegate methods
+    func onOpenChatBtnClicked() {
+        print("ViewController - onOpenChatBtnClicked() called")
+
+        let myOpenChatURL = URL(string: "https://www.youtube.com/channel/UCutO2H_AVmWHbzvE92rpxjA")
+        self.myWebView.load(URLRequest(url: myOpenChatURL!))
     }
 }
 
