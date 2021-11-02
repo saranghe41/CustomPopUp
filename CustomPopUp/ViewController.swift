@@ -8,6 +8,8 @@
 import UIKit
 import WebKit
 
+let notificationCT = "btnClickNotification"
+
 class ViewController: UIViewController, PopUpDelegate {
     
     @IBOutlet weak var popupBtn: UIButton!
@@ -19,6 +21,12 @@ class ViewController: UIViewController, PopUpDelegate {
         
         let bagicURL = URL(string: "http://www.naver.com")
         myWebView.load(URLRequest(url: bagicURL!))
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(loadWebView), name: Notification.Name(rawValue: "btnClickNotification"), object: nil)
+    }
+    
+    @objc fileprivate func loadWebView() {
+        print("ViewController - loadWebView() called")
     }
     
     @IBAction func onPopupBtnClicked(_ sender: Any) {
