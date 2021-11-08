@@ -8,12 +8,17 @@
 import UIKit
 import WebKit
 
-let notificationCT = "btnClickNotification"
+let notificationName = "btnClickNotification"
 
 class ViewController: UIViewController, PopUpDelegate {
     
     @IBOutlet weak var popupBtn: UIButton!
     @IBOutlet weak var myWebView: WKWebView!
+    
+    // 노티피케이션 옵저버를 띄우고나서 프로그램 종료시 제거를 해줘야한다.
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +27,15 @@ class ViewController: UIViewController, PopUpDelegate {
         let bagicURL = URL(string: "http://www.naver.com")
         myWebView.load(URLRequest(url: bagicURL!))
         
+        // 노티피케이션이라는 방송 수신기를 장착한다.
         NotificationCenter.default.addObserver(self, selector: #selector(loadWebView), name: Notification.Name(rawValue: "btnClickNotification"), object: nil)
     }
     
     @objc fileprivate func loadWebView() {
         print("ViewController - loadWebView() called")
+
+        let myGoogleURL = URL(string: "https://www.google.com")
+        self.myWebView.load(URLRequest(url: myGoogleURL!))
     }
     
     @IBAction func onPopupBtnClicked(_ sender: Any) {

@@ -13,6 +13,7 @@ class CustomPopUpViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var subscribBtn: UIButton!
     @IBOutlet weak var openChatBtn: UIButton!
+    @IBOutlet weak var googleBtn: UIButton!
     @IBOutlet weak var bgBtn: UIButton!
     @IBOutlet weak var myImg: UIImageView!
     
@@ -28,6 +29,7 @@ class CustomPopUpViewController: UIViewController {
         contentView.layer.cornerRadius = 30
         subscribBtn.layer.cornerRadius = 10
         openChatBtn.layer.cornerRadius = 10
+        googleBtn.layer.cornerRadius = 10
         myImg.layer.cornerRadius = 40
     }
     
@@ -58,5 +60,13 @@ class CustomPopUpViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
         
         popupDelegate?.onOpenChatBtnClicked()
+    }
+    
+    @IBAction func onGoogleBtnClicked(_ sender: Any) {
+        print("CustomPopUpViewController - onGoogleBtnClicked() called")
+        
+        NotificationCenter.default.post(name: Notification.Name(rawValue: notificationName), object: nil)
+        dismiss(animated: true, completion: nil
+        )
     }
 }

@@ -73,6 +73,10 @@
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="구글 가기"/>
+                                                <connections>
+                                                    <action selector="onGoogleBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xGV-pQ-Fq9"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwW-xg-Fav">
                                                 <rect key="frame" x="0.0" y="80" width="120" height="30"/>
@@ -120,6 +124,7 @@
                     <connections>
                         <outlet property="bgBtn" destination="LFr-G4-1Gi" id="6ZE-0b-NGt"/>
                         <outlet property="contentView" destination="Zld-Sf-U8D" id="9iM-Pi-dfl"/>
+                        <outlet property="googleBtn" destination="2ja-CX-5Ra" id="ILX-QS-IMj"/>
                         <outlet property="myImg" destination="NT0-NZ-r4h" id="2py-jn-uOk"/>
                         <outlet property="openChatBtn" destination="jCh-e4-wPu" id="Exf-3f-3qz"/>
                         <outlet property="subscribBtn" destination="hwW-xg-Fav" id="nTu-PJ-b5p"/>
